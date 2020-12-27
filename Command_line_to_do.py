@@ -23,13 +23,13 @@ class Program:
         while True:
             name = input('Enter task name between 1 to 15 characters: ')
             if len(name) == 0 or len(name) > 15:
-                print('Task name should be between 1 and 15 characters')
+                print('Task name should be between 1 and 15 characters.')
                 continue
             break
         while True:
             description = input('Enter task description less than 255 characters: ')
             if len(description) > 255:
-                print('Task description should be less than 255 characters')
+                print('Task description should be less than 255 characters.')
                 continue
             break
         task = Task(name, description)
@@ -47,16 +47,18 @@ class Program:
             print(i+1, self.task_list[i])
 
     def remove_task(self):
+        if len(self.task_list) == 0:
+            print('\nThere are no tasks to delete. Redirecting back to main menu.')
+            return
         while True:
-            if len(self.task_list) == 0:
-                print('\nThere are no tasks to delete. Redirecting back to main menu.')
-                break
-            task_index = int(input('Enter the task index to delete the task: '))
-            try: 
-                self.task_list[task_index - 1]
-            except:
-                print('Invalid task index. Redirecting back to main menu')
-                break
+            try:
+                task_index = int(input('Enter the task index to delete the task: '))
+            except ValueError:
+                print('Task index should be a number.')
+                continue
+            if task_index <= 0 or task_index > len(self.task_list):
+                print('Invalid task index.')
+                continue
             del self.task_list[task_index-1]
 
             with open('task3.txt', 'w') as f:
