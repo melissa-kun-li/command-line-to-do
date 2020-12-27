@@ -105,7 +105,11 @@ class Program:
 a = Program()
 while True:
     print('\n1. Create a new task\n2. List all tasks\n3. Remove a task\n4. Update task\n5. Exit')
-    user_input = int(input('\nChoose an option: '))
+    try:
+        user_input = int(input('\nChoose an option: '))
+    except ValueError:
+        print('Input should be a number from 1 to 5.')
+        continue
     if user_input == 1:
         a.create_task()
     elif user_input == 2:
