@@ -67,31 +67,38 @@ class Program:
             break
 
     def update_task(self):
+        if len(self.task_list) == 0:
+            print('\nThere are no tasks to update. Redirecting back to main menu.')
+            return
         while True:
-            if len(self.task_list) == 0:
-                print('\nThere are no tasks to update. Redirecting back to main menu.')
-                break
-            update_index = int(input('Enter the index of the task to update: '))
-            try: 
-                self.task_list[update_index-1]
-            except:
-                print('Invalid task index. Redirecting back to main menu')
-                break
+            try:
+                update_index = int(input('Enter the index of the task to update: '))
+            except ValueError:
+                print('Task index should be a number.')
+                continue
+            if update_index <= 0 or update_index > len(self.task_list):
+                print('Invalid task index.')
+                continue
+            break
+        while True:
             name = input('Enter updated task name between 1 to 15 characters: ')
             if len(name) == 0 or len(name) > 15:
-                print('Task name should be between 1 and 15 characters')
+                print('Task name should be between 1 and 15 characters.')
                 continue
+            break
+        while True:
             description = input('Enter updated task description less than 255 characters: ')
             if len(description) > 255:
-                print('Task name should be less than 255 characters')
+                print('Task name should be less than 255 characters.')
                 continue
-            self.task_list[update_index-1] = name + ';' + description
-
-            with open('task3.txt', 'w') as f:
-                for item in self.task_list:
-                    f.write(str(item) + '\n')
-
             break
+
+        task = Task(name, description)
+        self.task_list[update_index-1] = task
+
+        with open('task3.txt', 'w') as f:
+            for item in self.task_list:
+                f.write(str(item) + '\n')
 
 a = Program()
 while True:
