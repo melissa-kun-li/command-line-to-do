@@ -4,7 +4,7 @@ class Task:
         self.description = description
     
     def __str__(self):
-        return str(self.name) + '; ' + str(self.description)
+        return str(self.name) + ';' + str(self.description)
 
 class Program:
     def __init__(self): 
@@ -12,10 +12,11 @@ class Program:
         try:
             with open('task.txt', 'r') as f:
                 for line in f: 
-                    l = line.split(';')
-                    name, description = l[0], l[1] 
-                    task = Task(name, description)
-                    self.task_list.append(task)
+                    if line!= '\n':
+                        l = line.split(';')
+                        name, description = l[0], l[1] 
+                        task = Task(name, description)
+                        self.task_list.append(task)
         except FileNotFoundError:
             pass
 
@@ -59,8 +60,9 @@ class Program:
             if task_index <= 0 or task_index > len(self.task_list):
                 print('Invalid task index.')
                 continue
-            del self.task_list[task_index-1]
             break
+
+        del self.task_list[task_index-1]
 
         with open('task.txt', 'w') as f:
             for item in self.task_list:
