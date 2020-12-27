@@ -12,11 +12,10 @@ class Program:
         try:
             with open('task.txt', 'r') as f:
                 for line in f: 
-                    if line!= '\n':
-                        l = line.split(';')
-                        name, description = l[0], l[1] 
-                        task = Task(name, description)
-                        self.task_list.append(task)
+                    l = line[:-1].split(';')
+                    name, description = l[0], l[1] 
+                    task = Task(name, description)
+                    self.task_list.append(task)
         except FileNotFoundError:
             pass
 
