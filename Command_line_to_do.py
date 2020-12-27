@@ -42,6 +42,7 @@ class Program:
     def list_task(self):
         if len(self.task_list) == 0:
             print('\nThere are no tasks. Redirecting back to main menu.')
+            return
         for i in range(len(self.task_list)):
             print(i+1, self.task_list[i])
 
