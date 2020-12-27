@@ -10,7 +10,7 @@ class Program:
     def __init__(self): 
         self.task_list = []
         try:
-            with open('task3.txt', 'r') as f:
+            with open('task.txt', 'r') as f:
                 for line in f: 
                     l = line.split(';')
                     name, description = l[0], l[1] 
@@ -35,7 +35,7 @@ class Program:
         task = Task(name, description)
         self.task_list.append(task)
 
-        with open('task3.txt', 'a') as f:
+        with open('task.txt', 'a') as f:
             f.write(name + ';') 
             f.write(description + '\n')
 
@@ -61,7 +61,7 @@ class Program:
                 continue
             del self.task_list[task_index-1]
 
-            with open('task3.txt', 'w') as f:
+            with open('task.txt', 'w') as f:
                 for item in self.task_list:
                     f.write(str(item) + '\n') # str(item) -> def__str__(self)
             break
@@ -96,7 +96,7 @@ class Program:
         task = Task(name, description)
         self.task_list[update_index-1] = task
 
-        with open('task3.txt', 'w') as f:
+        with open('task.txt', 'w') as f:
             for item in self.task_list:
                 f.write(str(item) + '\n')
 
