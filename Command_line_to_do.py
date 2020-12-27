@@ -60,11 +60,11 @@ class Program:
                 print('Invalid task index.')
                 continue
             del self.task_list[task_index-1]
-
-            with open('task.txt', 'w') as f:
-                for item in self.task_list:
-                    f.write(str(item) + '\n') # str(item) -> def__str__(self)
             break
+
+        with open('task.txt', 'w') as f:
+            for item in self.task_list:
+                f.write(str(item) + '\n') # str(item) -> def__str__(self)
 
     def update_task(self):
         if len(self.task_list) == 0:
