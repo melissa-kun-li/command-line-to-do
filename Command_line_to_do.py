@@ -4,7 +4,7 @@ class Task:
         self.description = description
     
     def __str__(self):
-        return str(self.name) + '; ' + str(self.description)
+        return str(self.name) + ' ' + str(self.description)
 
 class Program:
     def __init__(self): 
