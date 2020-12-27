@@ -9,6 +9,6 @@ Its features are:
 5. Exit
 
 ### Next steps:
-Add feature to create a new user and allow multiple users to have their own to-do lists, maybe with authentication
-Create a web app/Flask app
+Add feature to create a new user and allow multiple users to have their own to-do lists, maybe with authentication\
+Create a web app/Flask app\
 Use sqlite to store tasks in to-do list
