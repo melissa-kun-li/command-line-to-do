@@ -1,4 +1,4 @@
-## Simple command line to-do list manager
+# Simple command line to-do list manager
 This command line program keeps a to-do list of tasks and has save/load functionality by writing tasks to a txt file. The txt file is read when the program starts so that tasks are saved from the previous session.  
 
 Its features are:
@@ -8,7 +8,7 @@ Its features are:
 4. Update a task
 5. Exit
 
-### Next steps:
-Add feature to create a new user and allow multiple users to have their own to-do lists, maybe with authentication\
-Create a web app/Flask app\
-Use sqlite to store tasks in to-do list
+## Next steps:
+- [ ] Create a web app/Flask app *(working on as of Dec. 30, 2020)* 
+- [ ] Use sqlite to store tasks in to-do list *(working on as of Dec. 30, 2020)*
+- [ ] Add feature to create a new user and allow multiple users to have their own to-do lists, maybe with authentication\
