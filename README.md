@@ -9,6 +9,7 @@ Its features are:
 5. Exit
 
 ## Next steps:
-- [ ] Create a web app/Flask app *(working on as of Dec. 30, 2020)* 
-- [ ] Use sqlite to store tasks in to-do list *(working on as of Dec. 30, 2020)*
-- [ ] Add feature to create a new user and allow multiple users to have their own to-do lists, maybe with authentication\
+- [x] Create a web app/Flask app *(working on as of Dec. 30, 2020. Finished Jan. 5: [here](https://github.com/melissa-kun-li/flask-to-do-app))* 
+- [x] Use sqlite to store tasks in to-do list *(working on as of Dec. 30, 2020. Finished Jan. 5: [here](https://github.com/melissa-kun-li/flask-to-do-app))* 
+- [ ] Add feature to create a new user and allow multiple users to have their own to-do lists with authentication *(working on as of Jan. 5, 2021)*
+- [ ] Use MySQL databse *(working on as of Jan. 5, 2021)*
