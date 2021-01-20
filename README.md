@@ -9,7 +9,7 @@ Its features are:
 5. Exit
 
 ## Next steps:
-- [x] Create a web app/Flask app *(working on as of Dec. 30, 2020. Finished Jan. 5: [here](https://github.com/melissa-kun-li/flask-to-do-app))* 
-- [x] Use sqlite to store tasks in to-do list *(working on as of Dec. 30, 2020. Finished Jan. 5: [here](https://github.com/melissa-kun-li/flask-to-do-app))* 
-- [ ] Add feature to create a new user and allow multiple users to have their own to-do lists with authentication *(working on as of Jan. 5, 2021)*
-- [ ] Use MySQL databse *(working on as of Jan. 5, 2021)*
+:white_check_mark: Create a web app/Flask app *(working on as of Dec. 30, 2020. Finished Jan. 5: [here](https://github.com/melissa-kun-li/flask-to-do-app))*.  
+:white_check_mark: Use sqlite to store tasks in to-do list *(working on as of Dec. 30, 2020. Finished Jan. 5: [here](https://github.com/melissa-kun-li/flask-to-do-app))*.  
+:white_check_mark: Add feature to create a new user and allow multiple users to have their own to-do lists with authentication *(working on as of Jan. 5, 2021. Finished Jan. 20: [here](https://github.com/melissa-kun-li/flask-to-do-app))*.   
+:white_check_mark: Use MySQL database *(working on as of Jan. 5, 2021. Decided to use PostgreSQL, Finished Jan. 20 [here](https://github.com/melissa-kun-li/flask-to-do-app))*. 
